@@ -13,10 +13,10 @@ runanalysis.R assumes the input data files that comprise the UCI HAR Dataset, an
 The UCI HAR Dataset comes with a README file explaining how the various data files are related to one another, and should be reviewed prior to a read through of runanalysis.R.
 
 runanalysis.R does the following:  
-<li> Merges the training and the test data sets from UCI HAR Dataset to create one dataframe that includes both the "Activity" and the "Subject" variables for each record/measurement.  
-<li> It extracts only the measurement data associated with the calculated mean and standard deviation for each measurement. The selection of these specific measurments is based on a "grep()" of all "feature" column names that contain the exact string "mean()" or "std()".  
-<li> Replaces numeric activity codes with their associated descriptive names based on the data provided in the "activity_labels.txt" input file.  
-<li> Labels the column names in the output data set written to "avgmeasures.txt" using the descriptive labels found in the "features.txt" input file.  
+1 Merges the training and the test data sets from UCI HAR Dataset to create one dataframe that includes both the "Activity" and the "Subject" variables for each record/measurement.  
+2 It extracts only the measurement data associated with the calculated mean and standard deviation for each measurement. The selection of these specific measurments is based on a "grep()" of all "feature" column names that contain the exact string "mean()" or "std()".  
+3 Replaces numeric activity codes with their associated descriptive names based on the data provided in the "activity_labels.txt" input file.  
+4 Labels the column names in the output data set written to "avgmeasures.txt" using the descriptive labels found in the "features.txt" input file.  
 
 runanalysis.R uses the "melt()" and "dcast()" functions, and requires that the "reshape.R" package is installed.
 
